@@ -1,0 +1,275 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+nav {  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  z-index: 999;
+}
+
+.logo a {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links a:hover {
+  border-bottom: 4px solid #db17c1;
+  padding-bottom: 7px;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn,
+.cart-btn {
+  list-style: none;
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn a,
+.cart-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.cart-btn {
+  background-color: #f5f3f3;
+  color: #000000;
+  border: 2px solid #db17c1;
+}
+
+.cart-btn:hover {
+  background-color: #db17c1;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.login-btn {
+  background-color: #006bcf;
+  color: #ffffff;
+  border: 1px solid #362e2e;
+}
+
+.login-btn:hover {
+  background-color: #db17c1;
+  border: 1px solid #ffffff;
+  color: #000000;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('img/2.png');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.books {
+
+  padding: 50px;
+  text-align: center;
+}
+
+.books h2 {
+    margin-top: 50px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.book {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.book h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.book p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #555;
+}
+
+.contact {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  border-top: 1px solid #ddd;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact textarea {
+  height: 120px;
+}
+
+.contact button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact button[type="submit"]:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+.logout-btn {
+  margin: 5px;
+  padding: 10px;
+  background-color: #cf0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #db17c1;
+}
+

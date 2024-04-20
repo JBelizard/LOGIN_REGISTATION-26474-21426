@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><a href="./home.html">NETWORK SECURITY</a></div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 style="text-align: center;">Login</h1>
+        <form>
+          <label for="username">Utilizador</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required />
+          <button type="button" onclick="login()">Entrar</button>
+        </form>
+        <p id="loginError" class="error-message"></p>
+        <p>Ainda não tem uma conta? <a href="register.html">Registar-se</a></p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 NETWORK SECURITY. Todos os direitos reservados.</p>
+  </footer>
+    <script src="./sigin.js">
+    
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+
+      body {
+        background-color: #cccccc;
+      }
+
+      .cart-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .cart-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .cart-items {
+        margin-top: 20px;
+      }
+
+      .cart-items hr {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .cart-item .remove-btn {
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+
+    <script>
+      //Função Pesquisar Livros
+      function searchBooks() {
+        var input = document.getElementById('searchInput').value.toLowerCase();
+        var books = document.getElementsByClassName('book');
+
+        for (var i = 0; i < books.length; i++) {
+          var book = books[i];
+          var bookName = book.getElementsByTagName('h3')[0].innerText.toLowerCase();
+
+          if (bookName.includes(input)) {
+            book.style.display = 'block';
+          } else {
+            book.style.display = 'none';
+          }
+        }
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><a href="./home.html">NETWORK SECURITY</a></div>
+        <ul class="nav-links">
+          <li><a href="#books"><Em>Equipamentos</Em></a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="user">
+          <button class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <a href="carrinho.html" style="color: green;">
+              Carrinho
+            </a> 
+          </button>
+          <button id="loginButton" class="login-btn">
+            <a href="./login.html">Login</a>
+          </button>
+          <button
+            id="logoutButton"
+            class="logout-btn"
+            style="display: none;"
+            onclick="logout()"
+          >
+            Logout
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 style="color: black">
+          <b>Bem vindo à Network Security</b>
+        </h1>
+        <p style="color: black">
+          <b>Encontre os melhores Equipamentos - Redes.</b>
+        </p>
+        <a href="#books" class="btn">Consultar Equipamentos</a>
+      </div>
+    </section>
+
+    <div style="text-align: right;">
+      <form>
+        <label for="searchInput"><b>Buscar:</b></label>
+        <input type="text" id="searchInput" name="searchInput" placeholder="Insira nome equipamentos" style="width: 300px; height: 35px;"/>
+        <button type="button" onclick="searchBooks()" style="width: 100px; height: 35px; color: white; background-color: rgb(47, 159, 148)">
+          Busca 
+        </button>
+      </form>
+    </div>
+
+    <section class="books" id="books">
+      <h2>Equipamentos Disponíveis - Comprar</h2>
+      <hr />
+
+      <div class="book">
+        <img
+          src="img/13.png"
+          style="width: 200px; height: 270px;"
+          alt="Equipamento 1"
+        />
+        <h3>Computadores</h3>
+        <p class="price">$19.99</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Livro 3')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="book">
+        <img
+        src="img/6.png" 
+        style="width: 200px; height: 270px;"
+        alt="Equipamento 2"
+        />
+        <h3>Switchs</h3>
+        <p class="price">$19.99</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Livro 1')">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="book">
+        <img
+          src="img/7.png"
+          style="width: 200px; height: 270px;"
+          alt="Equipamento 3"
+        />
+        <h3>Routers</h3>
+        <p class="price">$24.99</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Livro 2')">Adicionar ao Carrinho</button>
+      </div>  
+
+      <div class="book">
+        <img
+          src="img/10.png"
+          style="width: 200px; height: 270px;"
+          alt="Equipamento 4"
+        />
+        <h3>Cabos</h3>
+        <p class="price">$19.99</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Livro 3')">Adicionar ao Carrinho</button>
+      </div>
+
+                 
+    </section>
+    
+    <footer>
+      <p>&copy; 2024 NETWORK SECURITY. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+    <script>
+      //Adicionar ao carrinho
+      function addToCart(bookTitle) {
+        // Obtenha dados do livro com base no título (você pode usar um objeto, banco de dados, etc.)
+        var bookData = {
+          title: bookTitle,
+          price: 19.99, //Exemplo de preço fixo
+        };
+
+        // Armazene os dados do livro no localStorage ou em outro local (para manter os dados após a navegação da página)
+        var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(bookData);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        // Redirecione para a página do carrinho
+          window.location.href = 'carrinho.html';
+      }
+
+    </script>
+        
+</body>
+</html>
+
+

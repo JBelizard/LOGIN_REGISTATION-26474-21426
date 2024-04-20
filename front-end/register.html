@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><a href="./home.html">NETWORK SECURITY</a></div>
+        <ul class="nav-links">
+          <li><a href="./home.html#books">Filmes</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="user">
+          <button class="login-btn"><a href="./login.html">Login</a></button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1 style="text-align: center;">Registar</h1>
+        <form>
+          <label for="signupUsername">Utilizador</label>
+          <input
+            type="text"
+            id="signupUsername"
+            name="signupUsername"
+            required
+          />
+          <label for="signupPassword">Senha</label>
+          <input
+            type="password"
+            id="signupPassword"
+            name="signupPassword"
+            required
+          />
+          <button type="button" onclick="signup()">Registar</button>
+        </form>
+        <p id="signupResult" class="error-message"></p>
+        <p>Já criaste uma conta? <a href="login.html">Acede sua conta</a></p>
+      </div>
+    </main>
+    <footer>
+    <p>&copy; 2024 NETWORK SECURITY. Todos os direitos reservados.</p>
+  </footer>
+    <script src="./sigin.js"></script>
+    <script>
+    </script>
+  </body>
+</html>
+
+

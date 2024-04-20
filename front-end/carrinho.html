@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookstore - Carrinho</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      background-color: #ccc;
+      font-size: 18px;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+      width: 180vh;
+      background-color: rgb(202, 202, 67);
+      margin: 0 auto; /* Adicione essa linha para centralizar horizontalmente */
+    }
+
+    .form-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+      color: black;
+    }
+
+    .form-input {
+      width: 250px;
+      padding: 5px;
+      border-radius: 3px;
+      border: none;
+    }
+
+    .form-button-container {
+      display: flex;  
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .form-button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 3px;
+      background-color: rgb(63, 63, 153);
+      color: black;
+      cursor: pointer;
+    }
+
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cart-table {
+      width: 80%;
+      margin: 0 auto; /* Adicione essa linha para centralizar horizontalmente */
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .cart-table th,
+    .cart-table td {
+      padding: 8px;
+      border: 1px solid black;
+    }
+
+    .cart-table th {
+      background-color: #f2f2f2;
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><a href="./home.html">NETWORK SECURITY</a></div>
+      <ul class="nav-links">
+        <li><a href="Admin.html">Admin</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <div class="user">
+        <button class="cart-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="carrinho.html" style="color: blue;">Carrinho</a>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+     
+    </div>
+  </section><br><br>
+
+  <h1 style="text-align: center; color: rgb(122, 47, 159)">
+    Carrinho Compra
+  </h1>
+  
+  <br><br><br><br><br><br>
+
+  <br><br>
+
+  <footer>
+    <p>&copy; 2024 NETWORK SECURITY. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  
+  <script>
+    function limparCampos() {
+      document.getElementById("meuFormulario").reset();
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
